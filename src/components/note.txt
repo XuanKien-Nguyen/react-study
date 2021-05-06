@@ -1,0 +1,14 @@
+App
+    - Header ----------
+    - Products ----------
+        Product (li) ----------
+    - Message --------
+    - Cart
+        CartItem - li
+        Result
+    - Footer
+
+-> 8 components
+
+
+Container component kết nối với Redux: lấy dữ liệu từ store về components
