@@ -15,7 +15,6 @@ const MainLayout = () => {
         axios.get('https://jsonplaceholder.typicode.com/todos')
         .then((res) => {
             if (res.status === 200) {
-                console.log(res.data);
                 setTodos(res.data);
             }
         })
@@ -23,7 +22,7 @@ const MainLayout = () => {
         .finally(() => {
             setTimeout(() => {
                 setLoading(false)
-            }, 2000)
+            }, 1000)
         });
     }, [])
 
