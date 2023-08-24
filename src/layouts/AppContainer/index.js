@@ -16,4 +16,4 @@ const AppContainer = () => {
     )
 }
 
-export default Layout;
+export default AppContainer;

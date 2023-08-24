@@ -10,4 +10,4 @@ const LoadingLayout = ({loading, children}) => {
     )
 }
 
-export default LoadingContainer;
+export default LoadingLayout;

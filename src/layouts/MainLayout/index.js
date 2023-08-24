@@ -1,9 +1,13 @@
-import React, {Fragment, useContext} from 'react';
+import React, {Fragment, useContext, useEffect} from 'react';
 import {LayoutContext} from '../../contexts';
 
 const MainLayout = () => {
 
-    const {setLoading} = useContext(LoadingLayout);
+    const {setLoading} = useContext(LayoutContext);
+
+    useEffect(() => {
+        setLoading(false);
+    })
 
     return (
         <Fragment>
