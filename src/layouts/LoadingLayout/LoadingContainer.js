@@ -1,9 +1,10 @@
 import React from 'react';
+import CircularProgress from '@mui/material/CircularProgress';
 
 const LoadingContainer = () => {
     return (
         <div className="loading_layout">
-            <span className="loading_text">Loading...</span>
+            <CircularProgress />
         </div>
     )
 }

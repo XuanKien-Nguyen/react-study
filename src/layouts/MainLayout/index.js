@@ -6,7 +6,7 @@ const MainLayout = () => {
     const {setLoading} = useContext(LayoutContext);
 
     useEffect(() => {
-        setLoading(false);
+        setLoading(true);
     })
 
     return (
