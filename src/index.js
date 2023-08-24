@@ -2,20 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {createStore} from 'redux';
-import appReducers from './reducers/index';
-import {Provider} from 'react-redux';
+import {BrowserRouter} from 'react-router-dom';
 
+import Layout from './layouts/Layout';
 
-const store = createStore(
-    appReducers,
-    window.__REDUX_DEVTOOLS_EXTENSIONS__ && window.__REDUX_DEVTOOLS_EXTENSIONS__()
-);
+const root = ReactDOM.creatRoot(document.getElementById('root'));
 
-ReactDOM.render(
-    <Provider store={store}>
-        <App />
-    </Provider>, 
-    document.getElementById('root')
+root.render(
+    <BrowserRouter>
+        <layout>
+            <App />
+        </layout>
+    </BrowserRouter>
 );
 reportWebVitals();

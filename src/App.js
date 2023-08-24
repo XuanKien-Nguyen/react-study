@@ -1,26 +1,15 @@
-import React, { Component } from 'react';
-import Header from './components/Header';
-import ProductsContainer from './containers/ProductsContainer';
-import MessageContainer from './containers/MessageContainer';
-import CartContainer from './containers/CartContainer';
-import Footer from './components/Footer';
+import React from 'react';
+import {LayoutProvider} from './contexts';
+import AppContainer from './layouts/AppContainer';
 
-class App extends Component {
-    render() {
+const App = () => {
+
         return (
-            <div>
-                <Header />
-                <main id="mainContainer">
-                    <div className="container">
-                        <ProductsContainer />
-                        <MessageContainer />
-                        <CartContainer /> 
-                    </div>
-                </main>
-                <Footer />  
-            </div>
+            <LayoutProvider>
+                <AppContainer />
+            </LayoutProvider>
         );
-    }
+
 }
 
 export default App;
