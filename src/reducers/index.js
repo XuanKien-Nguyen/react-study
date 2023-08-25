@@ -1,13 +1,9 @@
 import {combineReducers} from 'redux';
-import products from './product';
-import cart from './cart';
-import message from './message';
+import counter from './counter';
 
 
 const appReducers = combineReducers({
-    products, // products : products
-    cart,
-    message
+    counter
 })
 
 export default appReducers;

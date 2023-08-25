@@ -1,31 +1,11 @@
-import * as types from './../constants/ActionTypes';
-
-export const actAddToCart = (product, quantity) => {
+export const increment = () => {
     return {
-        type: types.ADD_TO_CART,
-        product,
-        quantity
-    }
-}
+        type: "INCREMENT",
+    };
+};
 
-export const actChangeMessage = (message) => {
+export const decrement = () => {
     return {
-        type: types.CHANGE_MSG,
-        message
-    }
-}
-
-export const actDeleteProduct = (product) => {
-    return {
-        type: types.DELETE_PRODUCT,
-        product
-    }
-}
-
-export const actUpdateProduct = (product, quantity) => {
-    return {
-        type: types.UPDATE_PRODUCT,
-        product,
-        quantity
-    }
-}
+        type: "DECREMENT",
+    };
+};
