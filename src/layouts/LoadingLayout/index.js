@@ -1,8 +1,12 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useContext} from 'react';
+import {LayoutContext} from '../../contexts';
 import LoadingContainer from './LoadingContainer';
 import './styles.scss';
 
-const LoadingLayout = ({loading, children}) => {
+const LoadingLayout = ({children}) => {
+
+    const {loading} = useContext(LayoutContext)
+
     return (
         <Fragment>
             {loading && <LoadingContainer />}

@@ -8,10 +8,10 @@ const MainLayout = () => {
 
     const [todos, setTodos] = useState([])
 
-    const {setLoading} = useContext(LayoutContext);
+    const {loading, dispatch} = useContext(LayoutContext);
 
     useEffect(() => {
-        setLoading(true);
+        dispatch({type: 'SET_LOADING', payload: true});
         axios.get('https://jsonplaceholder.typicode.com/todos')
         .then((res) => {
             if (res.status === 200) {
@@ -21,7 +21,7 @@ const MainLayout = () => {
         .catch(err => console.log(err))
         .finally(() => {
             setTimeout(() => {
-                setLoading(false)
+                dispatch({type: 'SET_LOADING', payload: false});
             }, 1000)
         });
     }, [])

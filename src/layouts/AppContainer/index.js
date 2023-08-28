@@ -1,15 +1,12 @@
-import React, {Fragment, useContext} from 'react';
-import {LayoutContext} from '../../contexts';
+import React, {Fragment} from 'react';
 import LoadingLayout from '../LoadingLayout';
 import MainLayout from '../MainLayout';
 
 const AppContainer = () => {
 
-    const {loading} = useContext(LayoutContext);
-
     return (
         <Fragment>
-            <LoadingLayout loading={loading}>
+            <LoadingLayout>
                 <MainLayout />
             </LoadingLayout>
         </Fragment>

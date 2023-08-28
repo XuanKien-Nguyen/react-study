@@ -1,5 +1,4 @@
-import React, {createContext} from 'react';
-import {SET_LOADING} from '../actions';
+import React, {createContext, useReducer} from 'react';
 
 const LayoutContext = createContext();
 
@@ -21,10 +20,10 @@ function LayoutProvider({children}) {
           }
     }
 
-    const [globalState, dispatch] = useReducer(reducer, initialState);
+    const [state, dispatch] = useReducer(reducer, initialState);
 
     return (
-        <LayoutContext.Provider value={{...initialState, dispatch}}>{children}</LayoutContext.Provider>
+        <LayoutContext.Provider value={{...state, dispatch}}>{children}</LayoutContext.Provider>
     )
 }
 
