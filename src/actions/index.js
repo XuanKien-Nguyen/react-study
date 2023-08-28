@@ -1,11 +1,6 @@
-export const increment = () => {
+export const SET_LOADING = (loadingState) => {
     return {
-        type: "INCREMENT",
-    };
-};
-
-export const decrement = () => {
-    return {
-        type: "DECREMENT",
+        type: 'SET_LOADING',
+        payload: loadingState,
     };
 };

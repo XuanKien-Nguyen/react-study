@@ -1,17 +1,30 @@
-import React, {useState, createContext} from 'react';
+import React, {createContext} from 'react';
+import {SET_LOADING} from '../actions';
 
 const LayoutContext = createContext();
 
 function LayoutProvider({children}) {
-    const [loading, setLoading] = useState(false);
 
     const initialState = {
-        loading,
-        setLoading
+        loading: false,
     };
 
+    const reducer = (state, action) => {
+        switch (action.type) {
+            case 'SET_LOADING':
+              return {
+                ...state,
+                loading: action.payload,
+              };
+            default:
+              return state;
+          }
+    }
+
+    const [globalState, dispatch] = useReducer(reducer, initialState);
+
     return (
-        <LayoutContext.Provider value={initialState}>{children}</LayoutContext.Provider>
+        <LayoutContext.Provider value={{...initialState, dispatch}}>{children}</LayoutContext.Provider>
     )
 }
 
