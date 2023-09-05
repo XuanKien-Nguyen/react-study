@@ -6,11 +6,17 @@ function LayoutProvider({children}) {
 
     const initialState = {
         loading: false,
+        user: null,
     };
 
     const reducer = (state, action) => {
         switch (action.type) {
             case 'SET_LOADING':
+              return {
+                ...state,
+                loading: action.payload,
+              };
+            case 'SET_USER':
               return {
                 ...state,
                 loading: action.payload,
