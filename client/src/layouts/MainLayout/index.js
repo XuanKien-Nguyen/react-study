@@ -3,6 +3,7 @@ import {LayoutContext} from '../../contexts';
 import axios from 'axios';
 
 import Todos from '../../pages/Todos';
+import Demo from '../../pages/DemoComponent';
 
 const MainLayout = () => {
 
@@ -28,7 +29,8 @@ const MainLayout = () => {
 
     return (
         <Fragment>
-            {todos.map(todo => <Todos key={todo.id} todoDetail={todo}/>)}
+            {/* {todos.map(todo => <Todos key={todo.id} todoDetail={todo}/>)} */}
+            <Demo />
         </Fragment>
     )
 }
