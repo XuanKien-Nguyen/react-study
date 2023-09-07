@@ -3,7 +3,7 @@ const db = require('../config/database');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
-const userLogin = (req, res) => {
+const userLogIn = (req, res) => {
     db.query(
         `SELECT * FROM use WHERE username = ${db.escape(req.body.username)};`,
         async (err, result) => {
@@ -79,4 +79,4 @@ const userSignUp = (req, res) => {
     )
 }
 
-module.exports = {userLogin, userSignUp}
+module.exports = {userLogIn, userSignUp}
