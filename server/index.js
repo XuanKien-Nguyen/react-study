@@ -32,7 +32,7 @@ app.use((err, req, res, next) => {
     })
 })
 
-app.use('/user', routeUser);
+app.use('/', routeUser);
 
 app.listen(port, () =>{
     console.log("Your app running on port " + port);
