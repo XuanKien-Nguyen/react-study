@@ -3,8 +3,8 @@ const mysql = require('mysql');
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    passwword: '123456',
-    database: 'reactDB'
+    passwword: 'Kien2810$#@!',
+    database: 'react_study_db'
 });
 
 db.connect((err) => {
